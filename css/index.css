@@ -83,7 +83,8 @@ p, a {
     font-size: 3rem;
 }
 
-/* header section */
+
+/*! header section */
 header {
     width: 100%;
     height: 100vh;
@@ -93,7 +94,74 @@ header {
     background-repeat: no-repeat;
 }
 
-/* spacers */
+header .container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(0, 4, 17, .8);
+    align-items: center;
+    padding: 1%;
+}
+.text {
+    margin: 1%;
+}
+.text h2 {
+    color: rgb(225, 239, 230);
+    font-size: 5rem;
+    font-weight: bold;
+}
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+    margin-top: 1%;
+    
+    
+}
+.navbar a {
+    color: rgb(225, 239, 230);
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 6rem;
+    margin-top: 2rem;
+    
+}
+.btn-container i {
+    cursor: pointer;
+    width: 3.5rem;
+    padding: 0.7rem;
+    text-align: center;
+    text-decoration: none;
+    background-color: #fff;
+    border-radius: 5px;
+    font-size: 2rem;
+    
+    
+}
+
+.fa:hover {
+    opacity: 0.7;
+    
+  }
+.fa-instagram {
+  text-align: center;
+  border-radius: 40px;
+  color: #fff;
+  background: #d6249f;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+  box-shadow: 0px 3px 10px rgba(0,0,0,.25);
+}
+.fa-twitter {
+    color: rgb(29, 161, 242);
+}
+.fa-facebook {
+    color: #3b5998;
+}
+
+/*! spacers */
 .spacer {
     width: 100%;
     height: 20vh;
@@ -105,18 +173,42 @@ header {
     background-color: rgb(0, 4, 17);
 }
 
-/* gallery section */
+/*! gallery section */
 .gallery {
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
     text-align: center;
     background-color: rgb(0, 4, 17);
 }
 
-/* about us section */
+.gallery .container {
+    display: flex;
+    flex-direction: column;
+}
+.gallery-text {
+    color: rgb(225, 239, 230);   
+}
+.gallery-text h2 {
+    padding-top: 1%;
+}
+.img-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5%;
+    
+    
+}
+.img-container img {
+    object-fit: cover;
+    padding: 1%;
+    
+}
+/*! about us section */
 .about {
     width: 100%;
-    height: 75vh;
+    height: 70vh;
     text-align: center;
     background-image: url("../img/staff-cooks.jpg");
     background-size: cover;
@@ -130,18 +222,23 @@ header {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background-color: rgb(0, 4, 17, .8);
+    background-color: rgb(0, 4, 17, 0.8);
+    
 }
 
 .about h2 {
     width: 100%;
+    color: rgb(225, 239, 230);
+    
 }
 
 .about-container .text {
     width: 50%;
+    color: rgb(225, 239, 230);
+    margin-bottom: 30px;
 }
 
-/* contact us section */
+/*! contact us section */
 .contact {
     text-align: center;
     background-image: url("../img/jumbo-restaurant.jpg");
@@ -149,6 +246,7 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     background-color: rgb(0, 4, 17);
+    
 }
 
 .contact-container {
@@ -159,14 +257,17 @@ header {
 
 .contact h2 {
     padding-top: 5vh;
+    color: rgb(225, 239, 230);
 }
 
 .contact h3 {
     padding-top: 2.5vh;
+    color: rgb(225, 239, 230);
 }
 
 .contact p {
     padding: .5vh 0;
+    color: rgb(225, 239, 230);
 }
 
 .info {
@@ -188,18 +289,91 @@ header {
     width: 25%;
 }
 
-/* footer section */
+#phone,#email {
+    color: rgb(225, 239, 230);
+}
+/*! footer section */
 footer {
     width: 100%;
-    height: 15vh;
     padding-top: 2.5vh;
     font-size: 3rem;
+    background-color: rgb(0, 4, 17);
+    border-top: 1px solid #fff;
+}
+.footer {
+    display: flex;
+    width: 100%;
+    
 }
 
-/* mobile media query */
-@media (max-width: 428px) {
-    /* header section */
+.mail-box-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 5rem;
+    width: 25%;
+    color: #fff;
+}
+.mail-box {
+    color: #fff;
     
+}
+
+.mail-box-container button {
+    padding: 1px 30px;
+}
+
+.navbar-wrapper {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    
+}
+.navbar-footer {
+    display: inline-flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    
+    
+}
+.navbar-footer a {
+    color: rgb(225, 239, 230);
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+h6 {
+    color: #fff;
+}
+
+.navbar-wrapper p {
+    font-size: 2rem;
+    color: #fff;
+    padding-top: 3rem;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding-right: 10%;
+    
+}
+
+
+/*! mobile media query */
+@media (max-width: 600px) {
+    /* header section */
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .btn-container {
+        align-items: center;
+    }
+
+    header h1 {
+        font-size: 4rem;
+      }
 
     /* gallery section */
     .gallery {
@@ -209,16 +383,38 @@ footer {
     /* about us section */
 
     .about {
-        height: 200vh;
+        height: 100%;
+    }
+    .about-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .about .text {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .about .text p {
+        display: flex;
+        flex-direction: wrap;
+        font-size: 2rem;
+        
     }
     
     .about h2 {
         width: 100%;
         padding-top: 5vh;
+        height: 100%;
+        font-size: 4rem;
+    }
+    .about h3 {
+        display: flex;
+        font-size: 3rem;
+        flex-wrap: wrap;
     }
     
     .about-container .text {
         width: 85%;
+        font-size: 20px;
     }
     
     /* contact us section */
@@ -228,6 +424,7 @@ footer {
     
     .info {
         flex-wrap: wrap;
+        
     }
     
     .address {
@@ -249,5 +446,33 @@ footer {
         height: auto;
         padding-top: 2.5vh;
         font-size: 2rem;
+        
+    }
+    .footer {
+        flex-direction: column;
+    }
+    .navbar-wrapper {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .navbar-footer {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20px;
+    }
+    .mail-box-container {
+        width: 100%;
+        display: flex;
+        margin: auto;
+        justify-content: center;
+    }
+    .mail-box {
+        flex-direction: column;
+        display: flex;
+        margin: auto;
+    }
+    .mail-box-container h5 {
+        margin: 0 auto;
+        padding: 10px;
     }
 }
